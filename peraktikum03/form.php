@@ -20,7 +20,7 @@ foreach ($skill as $s)
             $skor = $skor = 20;
             break;
         case 'php':
-            $skor = $skor = 30
+            $skor = $skor = 30;
             break;
         case 'python':
             $skor = $skor = 30;

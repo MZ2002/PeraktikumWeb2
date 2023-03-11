@@ -57,9 +57,9 @@ sama dengan 60 dan lebih kecil dari 70 maka akan mereturn string “Cukup” sel
 // Code function di sini
 function tentukan_nilai($nilai) {
     if ($nilai >= 85 && $nilai <= 100) {
-        return"sangat baik"
-    } else {$nilai >= 70 && $nilai < 85)
-        # code...
+        return "sangat baik";
+    } else {$nilai >= 70 && $nilai < 85){
+
     }
     
 }
