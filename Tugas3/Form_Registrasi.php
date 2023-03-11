@@ -71,31 +71,31 @@
                         <label class="col-4">Skill Web & Programming</label>
                         <div class="col-8">
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_0" type="checkbox" class="custom-control-input" value="HTML,">
+                                <input name="skill[]" id="Skill[]_0" type="checkbox" class="custom-control-input" value="HTML">
                                 <label for="Skill[]_0" class="custom-control-label">HTML</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_1" type="checkbox" class="custom-control-input" value="CSS,">
+                                <input name="skill[]" id="Skill[]_1" type="checkbox" class="custom-control-input" value="CSS">
                                 <label for="Skill[]_1" class="custom-control-label">CSS</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_2" type="checkbox" class="custom-control-input" value="JavaScript,">
+                                <input name="skill[]" id="Skill[]_2" type="checkbox" class="custom-control-input" value="JavaScript">
                                 <label for="Skill[]_2" class="custom-control-label">Javascript</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_3" type="checkbox" class="custom-control-input" value="RWD Bootstrap,">
+                                <input name="skill[]" id="Skill[]_3" type="checkbox" class="custom-control-input" value="RWD Bootstrap">
                                 <label for="Skill[]_3" class="custom-control-label">RWD Bootstrap</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_4" type="checkbox" class="custom-control-input" value="PHP,">
+                                <input name="skill[]" id="Skill[]_4" type="checkbox" class="custom-control-input" value="PHP">
                                 <label for="Skill[]_4" class="custom-control-label">PHP</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_5" type="checkbox" class="custom-control-input" value="Python,">
+                                <input name="skill[]" id="Skill[]_5" type="checkbox" class="custom-control-input" value="Python">
                                 <label for="Skill[]_5" class="custom-control-label">Python</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input name="skill[]" id="Skill[]_6" type="checkbox" class="custom-control-input" value="java">
+                                <input name="skill[]" id="Skill[]_6" type="checkbox" class="custom-control-input" value="Java">
                                 <label for="Skill[]_6" class="custom-control-label">Java</label>
                             </div>
                         </div>
@@ -143,31 +143,31 @@ $nilai = 0;
 foreach ($skill as $Data) {
     # code...
     switch ($Data) {
-        case 'html':
+        case 'HTML':
             # code...
             $nilai += 10;
             break;
-        case 'css':
+        case 'CSS':
             # code...
             $nilai += 10;
             break;
-        case 'javascript':
+        case 'JavaScript':
             # code...
             $nilai += 20;
             break;
-        case 'rwd bootstrap':
+        case 'RWD Bootstrap':
             $nilai += 20;
             # code...
             break;
-        case 'php':
+        case 'PHP':
             $nilai += 30;
             # code...
             break;
-        case 'python':
+        case 'Python':
             $nilai += 30;
             # code...
             break;
-        case 'java':
+        case 'Java':
             $nilai += 50;
             # code...
             break;
@@ -204,7 +204,7 @@ function predikat($nim, $nama, $kelamin, $prodi, $address, $skill, $nilai)
         echo "<p>Predikat : Cukup</p>";
     } elseif ($nilai > 60 && $nilai <= 100) {
         echo "<p>Predikat : Baik</p>";
-    } elseif ($nilai > 100 && $nilai <= 150) {
+    } elseif ($nilai > 100 && $nilai <= 170) {
         echo "<p>Predikat : Sangat Baik</p>";
     };
 };
