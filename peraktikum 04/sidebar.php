@@ -14,7 +14,7 @@
           <img src="dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">M.Gama Satria N</a>
+          <a href="#" class="d-block">Muhamad Zidan</a>
         </div>
       </div>
 
@@ -45,19 +45,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="praktikum01.php" class="nav-link">
+                <a href="peraktikum1.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Praktikum 01</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="praktikum02.php" class="nav-link">
+                <a href="Praktikum2.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Praktikum 02</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="praktikum03.php" class="nav-link">
+                <a href="praktikum3.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Praktikum 03</p>
                 </a>
