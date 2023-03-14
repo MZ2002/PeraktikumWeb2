@@ -42,7 +42,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-    <form class="form-horizontal" method="get" action="FormBelanja.php">
+    <form class="form-horizontal" method="POST" action="FormBelanja.php">
 <fieldset>
 
 <!-- Form Name -->
@@ -111,9 +111,9 @@
 </body>
     <?php
     
-$customer = $_GET ['customer'];
-$produk = $_GET ['produk'];
-$jumlah = $_GET ['jumlah'];
+$customer = $_POST ['customer'];
+$produk = $_POST ['produk'];
+$jumlah = $_POST ['jumlah'];
 
 echo "<br/>Customer :  {$customer} ";
 echo "<br/>Produk : {$produk}";
