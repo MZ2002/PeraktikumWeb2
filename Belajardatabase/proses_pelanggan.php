@@ -35,5 +35,5 @@ require_once 'dbkoneksi.php';
     $st->execute($ar_data);
    }
 
-   header('location:list_produk.php');
+   header('location:list_pelanggan.php');
 ?>
