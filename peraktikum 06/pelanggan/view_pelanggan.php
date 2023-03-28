@@ -6,7 +6,7 @@ $_id = $_GET['id'];
 // select * from produk where id = $_id;
 //$sql = "SELECT a.*,b.nama as jenis FROM produk a
 //INNER JOIN jenis_produk b ON a.jenis_produk_id=b.id WHERE a.id=?";
-$sql = "SELECT * FROM produk WHERE id = ?";
+$sql = "SELECT * FROM pelanggan WHERE id = ?";
 $st = $dbh->prepare($sql);
 $st->execute([$_id]);
 $row = $st->fetch();
@@ -24,28 +24,28 @@ $row = $st->fetch();
             <td><?= $row['kode'] ?></td>
         </tr>
         <tr>
-            <td>Nama Produk</td>
+            <td>Nama pelanggan</td>
             <td><?= $row['nama'] ?></td>
         </tr>
         <tr>
-            <td>Harga Jual</td>
-            <td><?= $row['harga_jual'] ?></td>
+            <td>Jenis Kelamin</td>
+            <td><?= $row['jk'] ?></td>
         </tr>
         <tr>
-            <td>Harga Beli</td>
-            <td><?= $row['harga_beli'] ?></td>
+            <td>Tempat lahir</td>
+            <td><?= $row['tmp_lahir'] ?></td>
         </tr>
         <tr>
-            <td>Stok</td>
-            <td><?= $row['stok'] ?></td>
+            <td>Tangal lahir</td>
+            <td><?= $row['tgl_lahir'] ?></td>
         </tr>
         <tr>
-            <td>Minimum Stok</td>
-            <td><?= $row['min_stok'] ?></td>
+            <td>email</td>
+            <td><?= $row['email'] ?></td>
         </tr>
         <tr>
-            <td>Jenis Produk</td>
-            <td><?= $row['jenis_produk_id'] ?></td>
+            <td>kartu_id</td>
+            <td><?= $row['kartu_id'] ?></td>
         </tr>
     </tbody>
 </table>

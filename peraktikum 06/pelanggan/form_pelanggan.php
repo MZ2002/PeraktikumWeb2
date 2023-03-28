@@ -1,5 +1,22 @@
 <?php
 require_once 'dbkoneksi.php';
+
+//membuat kondisi untuk mengedit data pelanggan 
+if (!empty($_GET['idedit'])) {
+  $edit = $_GET['idedit'];
+  //untuk menampilkan data dengan perintah select
+  $sql = "SELECT * FROM pelanggan WHERE id=?";
+  $st = $dbh->prepare($sql);
+  //intruksi untuk menjalankan program 
+  $st->execute([$edit]);
+  //untuk menampilkan baris di setiap data 
+  $row = $st->fetch();
+} else {
+  //untuk membuat data baru 
+  $row = [];
+};
+
+
 ?>
 
 <form method="POST" action="proses_pelanggan.php">
@@ -30,7 +47,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="harga_beli" class="col-4 col-form-label">Jenis Kelamin</label>
+    <label for="jk" class="col-4 col-form-label">Jenis Kelamin</label>
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -44,7 +61,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="stok" class="col-4 col-form-label">Tempat Lahir</label>
+    <label for="tmp_lahir" class="col-4 col-form-label">Tempat Lahir</label>
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -57,7 +74,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="min_stok" class="col-4 col-form-label">Tangggal Lahir</label>
+    <label for="tgl_lahir" class="col-4 col-form-label">Tangggal Lahir</label>
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -70,7 +87,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="min_stok" class="col-4 col-form-label">Gmail</label>
+    <label for="email" class="col-4 col-form-label">Gmail</label>
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -83,7 +100,7 @@ require_once 'dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="jenis" class="col-4 col-form-label">Kartu</label>
+    <label for="kartu_id" class="col-4 col-form-label">Kartu</label>
     <div class="col-8">
       <?php
       $sqljenis = "SELECT * FROM kartu";
@@ -107,7 +124,12 @@ require_once 'dbkoneksi.php';
   </div>
   <div class="form-group row">
     <div class="offset-4 col-8">
-      <input type="submit" name="proses" type="submit" class="btn btn-primary" value="Simpan" />
+      <<?php
+
+        $button = (empty($edit)) ? "Simpan" : "Update";
+
+        ?> <input type="submit" name="proses" type="submit" class="btn btn-primary" value="<?php echo $button; ?>" />
+      <input type="hidden" name="idedit" value="<?php echo $edit; ?>" />
     </div>
   </div>
 </form>
