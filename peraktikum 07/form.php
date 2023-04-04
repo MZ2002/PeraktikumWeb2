@@ -15,9 +15,8 @@
 <body>
     <div class="container">
         <h1 class="text-center">BMI Pasien</h1>
-        <form method="POST" action="from.php">
     </div>
-    <form>
+    <form method="POST" action="form.php">
         <div class="form-group row">
             <label for="nama" class="col-4 col-form-label">Nama Lengkap</label>
             <div class="col-8">
