@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,9 @@ Route::get('/nilai', function () {
 Route::get('/pasien', function () {
     return view('pasien');
 });
+
+// buat routing form
+route::get('/form', [FormController::class, 'index']);
+
+//buat route hasil form
+route::get('/hasil', [FormController::class, 'hasil']);
