@@ -1,4 +1,4 @@
 @extends('admin.layout.appadmin')
 @section('content')
-    Ini adalah dashboard
+    <h2>Ini adalah Dashboard</h2>
 @endsection

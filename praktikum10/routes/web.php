@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//buat routing untuk dashboard pakai controler
+// Bikin Routing untuk dashboard pake controller
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
-route::get('/dashboard', [DashboardController::class, 'index']);
+// Bikin Routing untuk produk pake controller
+Route::get('/produk', [ProdukController::class, 'index']);
 
-//buat routing produk
-route::get('/produk', [ProdukController::class, 'index']);
