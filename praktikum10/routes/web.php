@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +18,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Bikin Routing untuk dashboard pake controller
-Route::get('/dashboard', [DashboardController::class, 'index']);
+// Buat Route salam
+Route::get('/salam', function () {
+    return "Selamat Datang";
+});
 
-// Bikin Routing untuk produk pake controller
-Route::get('/produk', [ProdukController::class, 'index']);
+// Buat Route Kabar
+Route::get('/kabar', function () {
+    return view('kondisi');
+});
 
+// Buat Route Nilai
+Route::get('/nilai', function () {
+    return view('nilai');
+});
+
+// Buat Route Pasien
+Route::get('/pasien', function () {
+    return view('pasien');
+});
+
+// Buat Route Form
+Route::get('/form', [FormController::class, 'index']);
+
+// Buat Route Hasil Form
+Route::post('/hasil', [FormController::class, 'hasil']);
